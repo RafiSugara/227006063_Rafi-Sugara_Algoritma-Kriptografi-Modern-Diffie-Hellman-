@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diffie-Hellman Encryption</title>
+
+</head>
+<body>
+<h1>Enkripsi-Dekripsi Algoritma Diffie-Hellman</h1>
+
+<!-- Form untuk memasukkan parameter Diffie-Hellman -->
+<form id="dhParametersForm">
+  <label for="prime">Masukkan bilangan prima (p):</label><br>
+  <input type="text" id="prime" required><br>
+  <label for="base">Masukkan nilai pembangkit (g):</label><br>
+  <input type="text" id="base" required><br>
+  <label for="privateKey">Masukkan private key:</label><br>
+  <input type="text" id="privateKey" required><br>
+  <button type="submit">Dapatkan Public Key</button>
+</form>
+
+<!-- Area untuk menampilkan kunci bersama yang dihasilkan -->
+<div id="sharedKey"></div>
+
+<!-- Form untuk memasukkan teks yang akan dienkripsi -->
+<form id="encryptionForm" style="display:none;">
+  <label for="plainText">Enter text to encrypt:</label><br>
+  <textarea id="plainText" rows="4" cols="50"></textarea><br>
+  <button type="submit">Enkripsi</button>
+</form>
+
+<!-- Area untuk menampilkan teks yang telah dienkripsi -->
+<div id="encryptedText"></div>
+
+<!-- Form untuk memasukkan teks yang akan didekripsi -->
+<form id="decryptionForm" style="display:none;">
+  <label for="cipherText">Enter text to decrypt:</label><br>
+  <textarea id="cipherText" rows="4" cols="50"></textarea><br>
+  <button type="submit">Dekripsi</button>
+</form>
+
+<!-- Area untuk menampilkan teks yang telah didekripsi -->
+<div id="decryptedText"></div>
+
+<script src="script diffie-hellman.js"></script>
+
+</body>
+</html>
